@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue';
 
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
@@ -14,6 +14,9 @@ Vue.use(VueAnalytics, {
   id: 'UA-131375892-1',
   router
 })
+
+import VueContentPlaceholders from 'vue-content-placeholders'
+Vue.use(VueContentPlaceholders);
 
 import App from '../components/App.vue'
 import router from '../router'

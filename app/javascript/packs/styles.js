@@ -1,0 +1,1 @@
+import "vue-content-placeholders/src/styles.scss";

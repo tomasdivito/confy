@@ -1,33 +1,9 @@
 <template>
   <div>
-    <vue-headful title="Conferences"/>
-    <div v-for="conferencesForYear in conferencesByYear" :key="conferencesForYear.year">
-      <header>
-        <h1 class="content-subhead">{{ conferencesForYear.year }}</h1>
-      </header>
-      <section class="conferences-grid pure-g-r">
-        <article class="conference pure-u-1-3" v-for="conference in conferencesForYear.conferences" :key="conference.slug">
-          <div class="logo normal">
-            <router-link :to="{ name: 'Conference', params: { slug: conference.slug } }">
-              <img
-                :alt="conference.title"
-                :src="conference.image_url"
-                :title="conference.title"
-                style="width: 100%"
-              >
-            </router-link>
-          </div>
-          <header>
-            <h2 class="title mini">
-              <router-link :to="{ name: 'Conference', params: { slug: conference.slug } }">
-                {{ conference.title }}
-              </router-link>
-            </h2>
-            <p class="data">{{ conference.talks }} {{ conference.talks | pluralize("talk") }}</p>
-          </header>
-        </article>
-      </section>
-    </div>
+    <content-placeholders>
+      <content-placeholders-heading :img="true" />
+      <content-placeholders-text :lines="3" />
+    </content-placeholders>
   </div>
 </template>
 
